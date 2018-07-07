@@ -1,0 +1,13 @@
+{
+  "extends": "rallycoding",
+  "rules": {
+      "arrow-body-style": 0,
+      "no-console": "warn",
+      "quotes": ["error", "single", { "allowTemplateLiterals": true }]
+  },
+  "globals": {
+      "navigator": false,
+      "fetch": false,
+      "alert": false
+  }
+}
