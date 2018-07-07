@@ -1,6 +1,6 @@
 # Chick-Fil-A
 
-The goal of this project is to replicate the existing [Chick-Fil-A One](https://itunes.apple.com/us/app/chick-fil-a/id488818252?mt=8, "Chick-Fil-A One iOS App") mobile application using React Native. This project is designed to illustrate my capabilities as a React Native developer to potential employers.
+The goal of this project is to replicate the existing [Chick-Fil-A One](https://itunes.apple.com/us/app/chick-fil-a/id488818252?mt=8) mobile application using React Native. This project is designed to illustrate my capabilities as a React Native developer to potential employers.
 
 ## Why This?
 
@@ -14,7 +14,7 @@ This application was created using the Expo XDE. The easiest way to get started 
 
 Note: While React Native supports developing cross-platform applications, for this project I am solely targeting iOS to streamline my workflow and quicken the development process.
 
-- [Expo XDE](https://github.com/expo/xde/releases, "Expo XDE on GitHub")
+- [Expo XDE](https://github.com/expo/xde/releases)
 - [Expo iOS Client](https://itunes.apple.com/app/apple-store/id982107779)
 
 ### Installing
