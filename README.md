@@ -33,7 +33,7 @@ Once the node_modules directory is populated, the project should properly open a
 
 Coming soon.
 
-### Coding Style and Linting
+## Coding Style and Linting
 
 Coding style consistency is important to me. This project was styled based on input from the Prettier plugin for VSCode as well as an ESLint configuration that I've grown fond of which can be found in the devDependencies of package.json.
 
