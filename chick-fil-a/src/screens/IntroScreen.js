@@ -10,16 +10,17 @@ class IntroScreen extends Component {
     super(props);
     this.slideWidth = Dimensions.get('window').width;
     this.state = {
-      page: 1
+      pageNumber: 1,
+      statusBarStyle: 'default'
     };
   }
 
   handlePageChange = evt => {
     const offset = evt.nativeEvent.contentOffset;
-    const page = Math.round(offset.x / this.slideWidth) + 1;
+    const pageNumber = Math.round(offset.x / this.slideWidth) + 1;
 
-    if (this.state.page !== page) {
-      this.setState({ page });
+    if (this.state.pageNumber !== pageNumber) {
+      this.setState({ pageNumber });
     }
   };
 
@@ -31,9 +32,27 @@ class IntroScreen extends Component {
         showsHorizontalScrollIndicator={false}
         onMomentumScrollEnd={this.handlePageChange}
       >
-        <IntroSlide backgroundColor="#FFFDFF" text="Screen 1" />
-        <IntroSlide backgroundColor={colors.primaryRed} text="Screen 2" />
-        <IntroSlide backgroundColor={colors.green} text="Screen 3" />
+        <IntroSlide
+          pageNumber={1}
+          activePageNumber={this.state.pageNumber}
+          backgroundColor="#FFFDFF"
+          text="Screen 1"
+          statusBarStyle="dark-content"
+        />
+        <IntroSlide
+          pageNumber={2}
+          activePageNumber={this.state.pageNumber}
+          backgroundColor={colors.primaryRed}
+          text="Screen 2"
+          statusBarStyle="light-content"
+        />
+        <IntroSlide
+          pageNumber={3}
+          activePageNumber={this.state.pageNumber}
+          backgroundColor={colors.green}
+          text="Screen 3"
+          statusBarStyle="light-content"
+        />
       </ScrollView>
     );
   }
