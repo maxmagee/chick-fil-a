@@ -6,17 +6,29 @@ const screenWidth = Dimensions.get('window').width;
 export default EStyleSheet.create({
   container: {
     flex: 1,
-    width: screenWidth,
+    width: screenWidth
+  },
+  upperContainer: {
+    flex: 4,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  lowerContainer: {
+    flex: 1,
+    alignItems: 'center',
     justifyContent: 'center',
-    alignItems: 'center'
+    backgroundColor: '#FAF6FB'
+  },
+  textContainer: {
+    flex: 1,
+    alignItems: 'center',
+    paddingTop: 20
   },
   text: {
-    fontSize: 20,
-    padding: 15,
-    color: 'orange',
+    color: '$darkGray',
+    fontSize: 21,
+    fontFamily: 'Times New Roman',
+    lineHeight: 20,
     textAlign: 'center'
-  },
-  containerSub: {
-    backgroundColor: 'green'
   }
 });

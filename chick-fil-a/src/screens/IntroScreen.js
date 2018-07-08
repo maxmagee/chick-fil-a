@@ -36,21 +36,24 @@ class IntroScreen extends Component {
           pageNumber={1}
           activePageNumber={this.state.pageNumber}
           backgroundColor="#FFFDFF"
-          text="Screen 1"
+          text="Quickly order and pay for your meal, just the way you like it."
+          textContainerWidth={265}
           statusBarStyle="dark-content"
         />
         <IntroSlide
           pageNumber={2}
           activePageNumber={this.state.pageNumber}
-          backgroundColor={colors.primaryRed}
-          text="Screen 2"
+          backgroundColor={colors.red}
+          text="Scan your card at the register to earn treats or pay using Chick-fil-A One."
+          textContainerWidth={265}
           statusBarStyle="light-content"
         />
         <IntroSlide
           pageNumber={3}
           activePageNumber={this.state.pageNumber}
           backgroundColor={colors.green}
-          text="Screen 3"
+          text="Earn treats by placing mobile orders or scanning at the register."
+          textContainerWidth={300}
           statusBarStyle="light-content"
         />
       </ScrollView>
