@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Dimensions, ScrollView } from 'react-native';
+import { Button } from 'react-native-elements';
 
 import colors from '../config/colors';
 import introImage1 from '../../assets/Intro_1.png';
@@ -26,6 +27,30 @@ class IntroScreen extends Component {
       this.setState({ pageNumber });
     }
   };
+
+  handleGetStartedPress = () => {
+    // TODO: Modify this action
+    console.log('Get Started Pressed');
+  };
+
+  renderGetStartedButton = () => (
+    <Button
+      title="Get Started!"
+      titleStyle={{
+        fontSize: 18,
+        fontFamily: 'Times New Roman'
+      }}
+      buttonStyle={{
+        backgroundColor: colors.green,
+        width: 240,
+        height: 42,
+        borderColor: 'transparent',
+        borderWidth: 0,
+        borderRadius: 5
+      }}
+      onPress={this.handleGetStartedPress}
+    />
+  );
 
   render() {
     return (
@@ -61,6 +86,7 @@ class IntroScreen extends Component {
           textContainerWidth={300}
           statusBarStyle="light-content"
           image={introImage3}
+          button={this.renderGetStartedButton()}
         />
       </ScrollView>
     );

@@ -16,7 +16,6 @@ export default EStyleSheet.create({
   lowerContainer: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: '#FAF6FB'
   },
   textContainer: {
@@ -30,5 +29,9 @@ export default EStyleSheet.create({
     fontFamily: 'Times New Roman',
     lineHeight: 20,
     textAlign: 'center'
+  },
+  buttonContainer: {
+    flex: 1,
+    marginBottom: 20
   }
 });

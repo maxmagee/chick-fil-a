@@ -10,7 +10,8 @@ const IntroSlide = ({
   pageNumber,
   statusBarStyle,
   text,
-  textContainerWidth
+  textContainerWidth,
+  button
 }) => {
   if (pageNumber === activePageNumber) {
     StatusBar.setBarStyle(statusBarStyle);
@@ -18,6 +19,10 @@ const IntroSlide = ({
 
   const imageWidth = Image.resolveAssetSource(image).width;
   const imageHeight = Image.resolveAssetSource(image).height;
+
+  const renderButtonView = () => {
+    return button ? <View style={styles.buttonContainer}>{button}</View> : null;
+  };
 
   return (
     <View style={styles.container}>
@@ -28,6 +33,7 @@ const IntroSlide = ({
         <View style={[styles.textContainer, { width: textContainerWidth }]}>
           <Text style={styles.text}>{text}</Text>
         </View>
+        {renderButtonView()}
       </View>
     </View>
   );
