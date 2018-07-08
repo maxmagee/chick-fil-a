@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StatusBar, Text, View } from 'react-native';
+import { Image, StatusBar, Text, View } from 'react-native';
 import styles from './styles';
 
 const IntroSlide = ({
   activePageNumber,
   backgroundColor,
+  image,
   pageNumber,
   statusBarStyle,
   text,
@@ -15,9 +16,14 @@ const IntroSlide = ({
     StatusBar.setBarStyle(statusBarStyle);
   }
 
+  const imageWidth = Image.resolveAssetSource(image).width;
+  const imageHeight = Image.resolveAssetSource(image).height;
+
   return (
     <View style={styles.container}>
-      <View style={[styles.upperContainer, { backgroundColor }]} />
+      <View style={[styles.upperContainer, { backgroundColor }]}>
+        <Image source={image} width={imageWidth} height={imageHeight} />
+      </View>
       <View style={styles.lowerContainer}>
         <View style={[styles.textContainer, { width: textContainerWidth }]}>
           <Text style={styles.text}>{text}</Text>
@@ -33,7 +39,8 @@ IntroSlide.propTypes = {
   pageNumber: PropTypes.number,
   statusBarContent: PropTypes.string,
   text: PropTypes.string,
-  textContainerWidth: PropTypes.number
+  textContainerWidth: PropTypes.number,
+  image: PropTypes.number
 };
 
 export default IntroSlide;

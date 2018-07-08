@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Dimensions, ScrollView } from 'react-native';
 
 import colors from '../config/colors';
+import introImage1 from '../../assets/Intro_1.png';
+import introImage2 from '../../assets/Intro_2.png';
+import introImage3 from '../../assets/Intro_3.png';
 
 import { IntroSlide } from '../components/IntroSlide';
 
@@ -39,6 +42,7 @@ class IntroScreen extends Component {
           text="Quickly order and pay for your meal, just the way you like it."
           textContainerWidth={265}
           statusBarStyle="dark-content"
+          image={introImage1}
         />
         <IntroSlide
           pageNumber={2}
@@ -47,6 +51,7 @@ class IntroScreen extends Component {
           text="Scan your card at the register to earn treats or pay using Chick-fil-A One."
           textContainerWidth={265}
           statusBarStyle="light-content"
+          image={introImage2}
         />
         <IntroSlide
           pageNumber={3}
@@ -55,6 +60,7 @@ class IntroScreen extends Component {
           text="Earn treats by placing mobile orders or scanning at the register."
           textContainerWidth={300}
           statusBarStyle="light-content"
+          image={introImage3}
         />
       </ScrollView>
     );
