@@ -37,6 +37,11 @@ Coming soon.
 
 Coding style consistency is important to me. This project was styled based on input from the Prettier plugin for VSCode as well as an ESLint configuration that I've grown fond of which can be found in the devDependencies of package.json.
 
+## Development
+
+- master: Should be stable and ready to demo at any time.
+- development: Active development directly on this branch as well as merged in from feature branches.
+
 ## Deployment
 
 It's likely that I will publish this project to my personal [Expo Projects listing](https://expo.io/@maxmagee), but due to [recent restrictions by Apple](https://blog.expo.io/upcoming-limitations-to-ios-expo-client-8076d01aee1a), it's no longer possible to run Expo projects from other users in the iOS Client. Consequently, publishing there is simply to aide in my personal demos. I will not be publishing this to the App Store for obvious copyright reasons.
