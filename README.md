@@ -1,4 +1,4 @@
-# Chick-Fil-A
+# Chick-fil-A
 
 The goal of this project is to replicate the existing [Chick-Fil-A One](https://itunes.apple.com/us/app/chick-fil-a/id488818252?mt=8) mobile application using React Native. This project is designed to illustrate my capabilities as a React Native developer to potential employers.
 
