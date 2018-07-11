@@ -67,7 +67,7 @@ class IntroScreen extends Component {
           <IntroSlide
             pageNumber={1}
             activePageNumber={this.state.pageNumber}
-            backgroundColor="#FFFDFF"
+            backgroundColor={colors.white}
             text="Quickly order and pay for your meal, just the way you like it."
             textContainerWidth={265}
             statusBarStyle="dark-content"

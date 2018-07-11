@@ -16,7 +16,7 @@ export default EStyleSheet.create({
   lowerContainer: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#FAF6FB'
+    backgroundColor: '#F6F7F8'
   },
   textContainer: {
     flex: 1,
