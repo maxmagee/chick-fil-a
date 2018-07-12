@@ -1,5 +1,6 @@
 const rp = require('request-promise');
 const cheerio = require('cheerio');
+const convert = require('./convert');
 
 const states = [
   'AL',
@@ -52,8 +53,9 @@ const states = [
   'WY'
 ];
 const baseURI = 'https://www.chick-fil-a.com/Locations/Browse/';
+const locations = [];
 
-const requestData = (state, resolve, reject) => {
+const statePageRequest = state => {
   const options = {
     uri: `${baseURI}${state}`,
     transform: body =>
@@ -62,27 +64,24 @@ const requestData = (state, resolve, reject) => {
       })
   };
 
-  rp(options)
-    .then($ => {
-      $('.location').each((i, elem) => {
-        resolve(processLocation(i, $(elem)));
-      });
-    })
-    .catch(err => {
-      reject(err);
-    });
+  return new Promise(resolve => {
+    resolve(
+      rp(options).then($ => {
+        $('.location').each((i, elem) => {
+          locations.push(processLocation(i, $(elem)));
+        });
+      })
+    );
+  });
 };
 
-const requestPromises = states.map(state => {
-  return new Promise((resolve, reject) => {
-    requestData(state, resolve, reject);
-  });
+const stateRequestPromises = states.map(statePageRequest);
+
+Promise.all(stateRequestPromises).then(() => {
+  convert.jsObjectToCsv(locations);
 });
 
-Promise.all(requestPromises).then(values => {
-  console.log(values);
-});
-
+// Parses the HTML Element and builds a JavaScript object from it
 const processLocation = (index, locationElement) => {
   const location = {};
 
@@ -90,7 +89,6 @@ const processLocation = (index, locationElement) => {
     .find('a')
     .text()
     .trim();
-  location.address = {};
 
   const addressElementContents = locationElement.find('p').contents();
   let cityStateZip;
