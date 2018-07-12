@@ -53,25 +53,27 @@ const states = [
 ];
 const baseURI = 'https://www.chick-fil-a.com/Locations/Browse/';
 
-const testState = 'TX';
+const requestData = state => {
+  const options = {
+    uri: `${baseURI}${state}`,
+    transform: body =>
+      cheerio.load(body, {
+        normalizeWhitespace: true
+      })
+  };
 
-const options = {
-  uri: `${baseURI}${testState}`,
-  transform: body =>
-    cheerio.load(body, {
-      normalizeWhitespace: true
+  rp(options)
+    .then($ => {
+      $('.location').each((i, elem) => {
+        processLocation(i, $(elem));
+      });
     })
+    .catch(err => {
+      console.log(err);
+    });
 };
 
-rp(options)
-  .then($ => {
-    $('.location').each((i, elem) => {
-      processLocation(i, $(elem));
-    });
-  })
-  .catch(err => {
-    console.log(err);
-  });
+states.forEach(requestData);
 
 const processLocation = (index, locationElement) => {
   const location = {};
