@@ -56,6 +56,7 @@ const baseURI = 'https://www.chick-fil-a.com/Locations/Browse/';
 const locations = [];
 
 const statePageRequest = state => {
+  console.log(`Fetching state: ${state}`);
   const options = {
     uri: `${baseURI}${state}`,
     transform: body =>
@@ -78,7 +79,7 @@ const statePageRequest = state => {
 const stateRequestPromises = states.map(statePageRequest);
 
 Promise.all(stateRequestPromises).then(() => {
-  convert.jsObjectToCsv(locations);
+  convert.jsObjectArrayToCsv(locations, 'locations.csv');
 });
 
 // Parses the HTML Element and builds a JavaScript object from it
@@ -116,6 +117,10 @@ const processLocation = (index, locationElement) => {
     location.state = cityStateZip[1] ? cityStateZip[1].trim().split(' ')[0] : '';
     location.zip = cityStateZip[1] ? cityStateZip[1].trim().split(' ')[1] : '';
   }
+
+  location.address = location.street2
+    ? `${location.street1} ${location.street2}`
+    : `${location.street1}`;
 
   return location;
 };
