@@ -1,17 +1,12 @@
 import React from 'react';
-import { createBottomTabNavigator, createSwitchNavigator } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation';
 import { Ionicons, SimpleLineIcons } from '@expo/vector-icons';
 
-import colors from './colors';
+import colors from '../colors';
 
-import IntroScreen from '../screens/IntroScreen';
-import FindScreen from '../screens/FindScreen';
-import MenuScreen from '../screens/MenuScreen';
-import HomeScreen from '../screens/HomeScreen';
-import MyOrderScreen from '../screens/MyOrderScreen';
-import MyCardScreen from '../screens/MyCardScreen';
+import { HomeScreen, FindScreen, MenuScreen, MyCardScreen, MyOrderScreen } from '../../screens';
 
-export const MainTabNavigator = createBottomTabNavigator(
+const MainTabNavigator = createBottomTabNavigator(
   {
     Find: {
       screen: FindScreen,
@@ -68,16 +63,4 @@ export const MainTabNavigator = createBottomTabNavigator(
   }
 );
 
-export const IntroSwitchNavigator = createSwitchNavigator(
-  {
-    Intro: {
-      screen: IntroScreen
-    },
-    MainTabs: {
-      screen: MainTabNavigator
-    }
-  },
-  {
-    initialRouteName: 'Intro'
-  }
-);
+export default MainTabNavigator;
