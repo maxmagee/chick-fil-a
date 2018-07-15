@@ -3,7 +3,7 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 
 import colors from './config/colors';
 
-import { MainTabNavigator } from './config/routes';
+import { IntroSwitchNavigator } from './config/routes';
 
 EStyleSheet.build({
   $darkGray: colors.darkGray,
@@ -14,4 +14,4 @@ EStyleSheet.build({
   // $outline: 1
 });
 
-export default () => <MainTabNavigator />;
+export default () => <IntroSwitchNavigator />;
