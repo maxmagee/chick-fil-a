@@ -14,24 +14,42 @@ import MyCardScreen from '../screens/MyCardScreen';
 export const MainTabNavigator = createBottomTabNavigator(
   {
     Find: {
-      screen: FindScreen
+      screen: FindScreen,
+      navigationOptions: {
+        tabBarLabel: 'Find',
+        tabBarIcon: ({ tintColor }) => <Ionicons name="md-pin" size={30} color={tintColor} />
+      }
     },
     Menu: {
-      screen: MenuScreen
+      screen: MenuScreen,
+      navigationOptions: {
+        tabBarLabel: 'Menu',
+        tabBarIcon: ({ tintColor }) => (
+          <Ionicons name="ios-restaurant" size={30} color={tintColor} />
+        )
+      }
     },
     Home: {
-      screen: HomeScreen
+      screen: HomeScreen,
+      navigationOptions: {
+        tabBarLabel: 'Home',
+        tabBarIcon: ({ tintColor }) => <Ionicons name="ios-home" size={30} color={tintColor} />
+      }
     },
     MyOrder: {
       screen: MyOrderScreen,
       navigationOptions: {
-        tabBarLabel: 'My Order'
+        tabBarLabel: 'My Order',
+        tabBarIcon: ({ tintColor }) => <SimpleLineIcons name="bag" size={30} color={tintColor} />
       }
     },
     MyCard: {
       screen: MyCardScreen,
       navigationOptions: {
-        tabBarLabel: 'My Card'
+        tabBarLabel: 'My Card',
+        tabBarIcon: ({ tintColor }) => (
+          <SimpleLineIcons name="credit-card" size={30} color={tintColor} />
+        )
       }
     }
   },
@@ -46,28 +64,7 @@ export const MainTabNavigator = createBottomTabNavigator(
         fontSize: 14,
         fontFamily: 'Arial'
       }
-    },
-    navigationOptions: ({ navigation }) => ({
-      //eslint-disable-next-line no-unused-vars
-      tabBarIcon: ({ focused, tintColor }) => {
-        const { routeName } = navigation.state;
-
-        switch (routeName) {
-          case 'Find':
-            return <Ionicons name="md-pin" size={30} color={tintColor} />;
-          case 'Menu':
-            return <Ionicons name="ios-restaurant" size={30} color={tintColor} />;
-          case 'Home':
-            return <Ionicons name="ios-home" size={30} color={tintColor} />;
-          case 'MyOrder':
-            return <SimpleLineIcons name="bag" size={30} color={tintColor} />;
-          case 'MyCard':
-            return <SimpleLineIcons name="credit-card" size={30} color={tintColor} />;
-          default:
-            break;
-        }
-      }
-    })
+    }
   }
 );
 
