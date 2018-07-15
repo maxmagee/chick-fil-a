@@ -31,8 +31,7 @@ class IntroScreen extends Component {
   };
 
   handleGetStartedPress = () => {
-    // TODO: Modify this action
-    console.log('Get Started Pressed');
+    this.props.navigation.navigate('MainTabs');
   };
 
   renderGetStartedButton = () => (
