@@ -25,7 +25,12 @@ class OptionsScreen extends Component {
 
   renderListItems = () => {
     return [
-      { title: 'Get Help', onPress: this.handleItemPress },
+      {
+        title: 'Get Help',
+        onPress: () => {
+          this.props.navigation.navigate('Help');
+        }
+      },
       { title: 'Give Feedback', onPress: this.handleItemPress },
       { title: 'Chick-fil-A One Intro', onPress: this.handleItemPress },
       { title: 'Privacy', onPress: this.handleItemPress },

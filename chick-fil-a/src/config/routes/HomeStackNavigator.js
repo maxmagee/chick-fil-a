@@ -2,7 +2,7 @@ import { createStackNavigator } from 'react-navigation';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 import { colors, navigationHeaderTitle } from '../globalStyles';
-import { HomeScreen, OptionsScreen } from '../../screens';
+import { HomeScreen, HelpScreen, OptionsScreen } from '../../screens';
 
 const HomeStackNavigator = createStackNavigator({
   Home: {
@@ -19,6 +19,17 @@ const HomeStackNavigator = createStackNavigator({
       headerTintColor: colors.white,
       headerStyle: {
         backgroundColor: colors.blue
+      }
+    })
+  },
+  Help: {
+    screen: HelpScreen,
+    navigationOptions: () => ({
+      title: 'Get Help',
+      headerTitleStyle: styles.headerTitle,
+      headerTintColor: colors.white,
+      headerStyle: {
+        backgroundColor: colors.red
       }
     })
   }
