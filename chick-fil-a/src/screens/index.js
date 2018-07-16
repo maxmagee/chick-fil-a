@@ -1,3 +1,4 @@
+import HelpScreen from './HelpScreen';
 import HomeScreen from './HomeScreen';
 import IntroScreen from './IntroScreen';
 import FindScreen from './FindScreen';
@@ -7,6 +8,7 @@ import MyCardScreen from './MyCardScreen';
 import MyOrderScreen from './MyOrderScreen';
 
 export {
+  HelpScreen,
   HomeScreen,
   IntroScreen,
   FindScreen,
