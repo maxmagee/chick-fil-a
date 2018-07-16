@@ -2,7 +2,7 @@ import { createStackNavigator } from 'react-navigation';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 import { colors, navigationHeaderTitle } from '../globalStyles';
-import { HomeScreen, HelpScreen, OptionsScreen } from '../../screens';
+import { HomeScreen, HelpScreen, OptionsScreen, QAScreen } from '../../screens';
 
 const HomeStackNavigator = createStackNavigator({
   Home: {
@@ -30,6 +30,17 @@ const HomeStackNavigator = createStackNavigator({
       headerTintColor: colors.white,
       headerStyle: {
         backgroundColor: colors.red
+      }
+    })
+  },
+  QA: {
+    screen: QAScreen,
+    navigationOptions: () => ({
+      title: 'QA',
+      headerTitleStyle: styles.headerTitle,
+      headerTintColor: colors.white,
+      headerStyle: {
+        backgroundColor: colors.white
       }
     })
   }

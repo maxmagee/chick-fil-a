@@ -6,6 +6,7 @@ import OptionsScreen from './OptionsScreen';
 import MenuScreen from './MenuScreen';
 import MyCardScreen from './MyCardScreen';
 import MyOrderScreen from './MyOrderScreen';
+import QAScreen from './QAScreen';
 
 export {
   HelpScreen,
@@ -15,5 +16,6 @@ export {
   OptionsScreen,
   MenuScreen,
   MyCardScreen,
-  MyOrderScreen
+  MyOrderScreen,
+  QAScreen
 };

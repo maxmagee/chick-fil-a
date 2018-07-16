@@ -14,7 +14,7 @@ class HelpScreen extends Component {
         <View style={styles.buttonContainer}>
           <View style={styles.buttonRowContainer}>
             <HelpButton
-              onPress={() => alert('pressed')}
+              onPress={() => this.props.navigation.navigate('QA')}
               iconImage={Phone}
               description="general app & account"
             />
