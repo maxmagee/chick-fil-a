@@ -2,11 +2,15 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 import { colors, paragraphText } from '../../config/globalStyles';
 
 export default EStyleSheet.create({
-  container: {
+  groupedItemContainer: {
+    width: 115,
+    height: 155
+  },
+  imageWithTextContainer: {
     flex: 1,
-    backgroundColor: colors.green,
+    backgroundColor: colors.white,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'flex-start'
   },
   image: {
     width: 78,

@@ -62,11 +62,8 @@ const styles = EStyleSheet.create({
     paddingHorizontal: 55
   },
   buttonContainer: {
-    //flex: 1,
-    //justifyContent: 'space-between',
-    //alignItems: 'center',
-    backgroundColor: colors.lightGray,
-    height: 370,
+    backgroundColor: colors.white,
+    height: 460,
     width: '100%'
   },
   buttonRowContainer: {

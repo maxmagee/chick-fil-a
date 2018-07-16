@@ -13,10 +13,12 @@ const HelpButton = ({ onPress, iconImage, description, textContainerWidth }) => 
 
   return (
     <TouchableOpacity onPress={onPress}>
-      <View style={styles.container}>
-        <Image style={styles.image} source={iconImage} />
-        <View style={textContainerStyles}>
-          <Text style={styles.text}>{description}</Text>
+      <View style={styles.groupedItemContainer}>
+        <View style={styles.imageWithTextContainer}>
+          <Image style={styles.image} source={iconImage} />
+          <View style={textContainerStyles}>
+            <Text style={styles.text}>{description}</Text>
+          </View>
         </View>
       </View>
     </TouchableOpacity>
