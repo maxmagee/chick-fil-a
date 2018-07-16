@@ -4,7 +4,8 @@ import { Ionicons, SimpleLineIcons } from '@expo/vector-icons';
 
 import colors from '../colors';
 
-import { HomeScreen, FindScreen, MenuScreen, MyCardScreen, MyOrderScreen } from '../../screens';
+import { FindScreen, MenuScreen, MyCardScreen, MyOrderScreen } from '../../screens';
+import HomeStackNavigator from './HomeStackNavigator';
 
 const MainTabNavigator = createBottomTabNavigator(
   {
@@ -25,7 +26,7 @@ const MainTabNavigator = createBottomTabNavigator(
       }
     },
     Home: {
-      screen: HomeScreen,
+      screen: HomeStackNavigator,
       navigationOptions: {
         tabBarLabel: 'Home',
         tabBarIcon: ({ tintColor }) => <Ionicons name="ios-home" size={30} color={tintColor} />
