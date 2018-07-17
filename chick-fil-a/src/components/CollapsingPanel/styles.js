@@ -1,24 +1,26 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
+import { colors, heading } from '../../config/globalStyles';
 
 export default EStyleSheet.create({
   container: {
-    backgroundColor: '#fff',
+    backgroundColor: colors.white,
     margin: 10,
     overflow: 'hidden'
   },
   titleContainer: {
-    flexDirection: 'row'
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   title: {
     flex: 1,
     padding: 10,
-    color: '#2a2f43',
-    fontWeight: 'bold'
-  },
-  button: { flex: 1 },
-  buttonImage: {
-    width: 30,
-    height: 25
+    color: colors.red,
+    fontFamily: heading.fontFamily,
+    fontSize: heading.fontSize,
+    fontWeight: heading.fontWeight,
+    textAlign: 'center'
   },
   body: {
     padding: 10,

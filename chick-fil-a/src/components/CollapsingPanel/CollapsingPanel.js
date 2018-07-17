@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Animated, Text, TouchableHighlight, View } from 'react-native';
 import styles from './styles';
+import colors from '../../config/colors';
 
 class CollapsingPanel extends Component {
   constructor(props) {
@@ -52,20 +53,15 @@ class CollapsingPanel extends Component {
   render() {
     return (
       <Animated.View style={[styles.container, { height: this.state.animation }]}>
-        <View style={styles.titleContainer}>
-          <TouchableHighlight
-            style={styles.button}
-            onPress={this.toggle.bind(this)}
-            underlayColor="#f1f1f1"
-          >
-            <View
-              style={{ flex: 1, backgroundColor: 'orange' }}
-              onLayout={this._setMinHeight.bind(this)}
-            >
-              <Text style={styles.title}>{this.state.title}</Text>
-            </View>
-          </TouchableHighlight>
-        </View>
+        <TouchableHighlight
+          style={styles.button}
+          onPress={this.toggle.bind(this)}
+          underlayColor={colors.lightGray}
+        >
+          <View style={styles.titleContainer} onLayout={this._setMinHeight.bind(this)}>
+            <Text style={styles.title}>{this.state.title}</Text>
+          </View>
+        </TouchableHighlight>
 
         <View style={styles.body} onLayout={this._setMaxHeight.bind(this)}>
           {this.props.children}

@@ -1,5 +1,6 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { Dimensions } from 'react-native';
+import { colors } from '../../config/globalStyles';
 
 const screenWidth = Dimensions.get('window').width;
 
@@ -16,7 +17,7 @@ export default EStyleSheet.create({
   lowerContainer: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#F6F7F8'
+    backgroundColor: colors.systemGray
   },
   textContainer: {
     flex: 1,

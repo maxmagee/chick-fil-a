@@ -3,7 +3,20 @@ import { View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 import { colors } from '../config/globalStyles';
-import { Bag, Cow, DollarSign, Phone, PhoneWithHand, Treat } from '../../assets/help';
+import {
+  Bag,
+  Cow,
+  DollarSign,
+  Phone,
+  PhoneWithHand,
+  Treat,
+  BagBanner,
+  CowBanner,
+  DollarSignBanner,
+  PhoneBanner,
+  PhoneWithHandBanner,
+  TreatBanner
+} from '../../assets/help';
 
 import { HelpButton } from '../components/HelpButton';
 
@@ -15,7 +28,11 @@ class HelpScreen extends Component {
           <View style={styles.buttonRowContainer}>
             <HelpButton
               onPress={() =>
-                this.props.navigation.navigate('QA', { category: 'general', title: 'General' })
+                this.props.navigation.navigate('QA', {
+                  category: 'general',
+                  title: 'General',
+                  bannerImage: PhoneBanner
+                })
               }
               iconImage={Phone}
               description="general app & account"
@@ -24,7 +41,8 @@ class HelpScreen extends Component {
               onPress={() =>
                 this.props.navigation.navigate('QA', {
                   category: 'features',
-                  title: 'Key Features'
+                  title: 'Key Features',
+                  bannerImage: PhoneWithHandBanner
                 })
               }
               iconImage={PhoneWithHand}
@@ -34,7 +52,11 @@ class HelpScreen extends Component {
           <View style={styles.buttonRowContainer}>
             <HelpButton
               onPress={() =>
-                this.props.navigation.navigate('QA', { category: 'card', title: 'My Card' })
+                this.props.navigation.navigate('QA', {
+                  category: 'card',
+                  title: 'My Card',
+                  bannerImage: DollarSignBanner
+                })
               }
               iconImage={DollarSign}
               description="Chick-fil-A One Card"
@@ -42,7 +64,11 @@ class HelpScreen extends Component {
             />
             <HelpButton
               onPress={() =>
-                this.props.navigation.navigate('QA', { category: 'ordering', title: 'Ordering' })
+                this.props.navigation.navigate('QA', {
+                  category: 'ordering',
+                  title: 'Ordering',
+                  bannerImage: BagBanner
+                })
               }
               iconImage={Bag}
               description="mobile ordering"
@@ -52,14 +78,22 @@ class HelpScreen extends Component {
           <View style={styles.buttonRowContainer}>
             <HelpButton
               onPress={() =>
-                this.props.navigation.navigate('QA', { category: 'treats', title: 'Treats' })
+                this.props.navigation.navigate('QA', {
+                  category: 'treats',
+                  title: 'Treats',
+                  bannerImage: TreatBanner
+                })
               }
               iconImage={Treat}
               description="treats"
             />
             <HelpButton
               onPress={() =>
-                this.props.navigation.navigate('QA', { category: 'calendar', title: 'Calendar' })
+                this.props.navigation.navigate('QA', {
+                  category: 'calendar',
+                  title: 'Calendar',
+                  bannerImage: CowBanner
+                })
               }
               iconImage={Cow}
               description="cow calendar"
