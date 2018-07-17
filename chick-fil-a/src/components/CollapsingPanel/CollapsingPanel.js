@@ -1,36 +1,35 @@
 import React, { Component } from 'react';
-import { Animated, Text, TouchableHighlight, View } from 'react-native';
+import PropTypes from 'prop-types';
+import { Animated, Text, TouchableOpacity, View } from 'react-native';
 import styles from './styles';
-import colors from '../../config/colors';
 
 class CollapsingPanel extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      title: props.title,
       expanded: false
     };
   }
 
-  _setMaxHeight(event) {
+  setMaxHeight = event => {
     if (this.state.maxHeight === undefined) {
       this.setState({
         maxHeight: event.nativeEvent.layout.height
       });
     }
-  }
+  };
 
-  _setMinHeight(event) {
+  setMinHeight = event => {
     if (this.state.minHeight === undefined) {
       this.setState({
         minHeight: event.nativeEvent.layout.height,
         animation: new Animated.Value(event.nativeEvent.layout.height)
       });
     }
-  }
+  };
 
-  toggle() {
+  toggle = () => {
     const initialValue = this.state.expanded
       ? this.state.maxHeight + this.state.minHeight
       : this.state.minHeight;
@@ -47,27 +46,31 @@ class CollapsingPanel extends Component {
 
     Animated.spring(this.state.animation, {
       toValue: finalValue
-    }).start(); //Step 5
-  }
+    }).start();
+  };
 
   render() {
     return (
       <Animated.View style={[styles.container, { height: this.state.animation }]}>
-        <TouchableHighlight
-          style={styles.button}
-          onPress={this.toggle.bind(this)}
-          underlayColor={colors.lightGray}
-        >
-          <View style={styles.titleContainer} onLayout={this._setMinHeight.bind(this)}>
-            <Text style={styles.title}>{this.state.title}</Text>
+        <TouchableOpacity onPress={this.toggle}>
+          <View style={styles.titleContainer} onLayout={this.setMinHeight}>
+            <Text style={styles.title}>{this.props.title}</Text>
           </View>
-        </TouchableHighlight>
+        </TouchableOpacity>
 
-        <View style={styles.body} onLayout={this._setMaxHeight.bind(this)}>
-          {this.props.children}
+        <View style={styles.body} onLayout={this.setMaxHeight}>
+          <TouchableOpacity onPress={this.toggle}>
+            <Text style={styles.bodyText}>{this.props.text}</Text>
+          </TouchableOpacity>
         </View>
       </Animated.View>
     );
   }
 }
+
+CollapsingPanel.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.string
+};
+
 export default CollapsingPanel;

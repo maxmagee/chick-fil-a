@@ -17,9 +17,7 @@ class QAScreen extends Component {
     const categoryQuestions = questions[category];
 
     return categoryQuestions.map((item, index) => (
-      <CollapsingPanel key={index} title={item.question}>
-        <Text style={styles.panelText}>{item.answer}</Text>
-      </CollapsingPanel>
+      <CollapsingPanel key={index} title={item.question} text={item.answer} />
     ));
   };
 
@@ -73,12 +71,6 @@ const styles = EStyleSheet.create({
     right: 0,
     bottom: 0,
     left: 0
-  },
-  panelText: {
-    fontFamily: paragraphText.fontFamily,
-    fontSize: paragraphText.fontSize,
-    fontWeight: paragraphText.fontWeight,
-    color: colors.darkGray
   },
   footer: {
     height: 70,

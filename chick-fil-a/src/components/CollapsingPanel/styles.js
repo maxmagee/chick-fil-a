@@ -1,5 +1,5 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
-import { colors, heading } from '../../config/globalStyles';
+import { colors, heading, paragraphText } from '../../config/globalStyles';
 
 export default EStyleSheet.create({
   container: {
@@ -25,5 +25,11 @@ export default EStyleSheet.create({
   body: {
     padding: 10,
     paddingTop: 0
+  },
+  bodyText: {
+    fontFamily: paragraphText.fontFamily,
+    fontSize: paragraphText.fontSize,
+    fontWeight: paragraphText.fontWeight,
+    color: colors.darkGray
   }
 });
