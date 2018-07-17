@@ -17,7 +17,7 @@ export default EStyleSheet.create({
     height: 78
   },
   textContainer: {
-    width: 92
+    width: 85
   },
   text: {
     fontFamily: paragraphText.fontFamily,
