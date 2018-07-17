@@ -14,34 +14,53 @@ class HelpScreen extends Component {
         <View style={styles.buttonContainer}>
           <View style={styles.buttonRowContainer}>
             <HelpButton
-              onPress={() => this.props.navigation.navigate('QA')}
+              onPress={() =>
+                this.props.navigation.navigate('QA', { category: 'general', title: 'General' })
+              }
               iconImage={Phone}
               description="general app & account"
             />
             <HelpButton
-              onPress={() => alert('pressed')}
+              onPress={() =>
+                this.props.navigation.navigate('QA', {
+                  category: 'features',
+                  title: 'Key Features'
+                })
+              }
               iconImage={PhoneWithHand}
               description="accessing key features"
             />
           </View>
           <View style={styles.buttonRowContainer}>
             <HelpButton
-              onPress={() => alert('pressed')}
+              onPress={() =>
+                this.props.navigation.navigate('QA', { category: 'card', title: 'My Card' })
+              }
               iconImage={DollarSign}
               description="Chick-fil-A One Card"
               textContainerWidth={105}
             />
             <HelpButton
-              onPress={() => alert('pressed')}
+              onPress={() =>
+                this.props.navigation.navigate('QA', { category: 'ordering', title: 'Ordering' })
+              }
               iconImage={Bag}
               description="mobile ordering"
               textContainerWidth={115}
             />
           </View>
           <View style={styles.buttonRowContainer}>
-            <HelpButton onPress={() => alert('pressed')} iconImage={Treat} description="treats" />
             <HelpButton
-              onPress={() => alert('pressed')}
+              onPress={() =>
+                this.props.navigation.navigate('QA', { category: 'treats', title: 'Treats' })
+              }
+              iconImage={Treat}
+              description="treats"
+            />
+            <HelpButton
+              onPress={() =>
+                this.props.navigation.navigate('QA', { category: 'calendar', title: 'Calendar' })
+              }
               iconImage={Cow}
               description="cow calendar"
               textContainerWidth={115}

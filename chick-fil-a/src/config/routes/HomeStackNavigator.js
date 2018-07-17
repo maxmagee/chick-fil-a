@@ -36,11 +36,10 @@ const HomeStackNavigator = createStackNavigator({
   QA: {
     screen: QAScreen,
     navigationOptions: () => ({
-      title: 'QA',
       headerTitleStyle: styles.headerTitle,
       headerTintColor: colors.white,
       headerStyle: {
-        backgroundColor: colors.white
+        backgroundColor: colors.red
       }
     })
   }
