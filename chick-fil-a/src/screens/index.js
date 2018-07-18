@@ -8,6 +8,7 @@ import MyCardScreen from './MyCardScreen';
 import MyOrderScreen from './MyOrderScreen';
 import QAScreen from './QAScreen';
 import LegalScreen from './LegalScreen';
+import NotificationScreen from './NotificationScreen';
 
 export {
   HelpScreen,
@@ -19,5 +20,6 @@ export {
   MyCardScreen,
   MyOrderScreen,
   QAScreen,
-  LegalScreen
+  LegalScreen,
+  NotificationScreen
 };

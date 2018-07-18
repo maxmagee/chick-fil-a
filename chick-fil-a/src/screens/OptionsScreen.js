@@ -40,7 +40,12 @@ class OptionsScreen extends Component {
           this.props.navigation.navigate('Legal');
         }
       },
-      { title: 'Notifications', onPress: this.handleItemPress },
+      {
+        title: 'Notifications',
+        onPress: () => {
+          this.props.navigation.navigate('Notifications');
+        }
+      },
       { title: 'Licenses', onPress: this.handleItemPress },
       { title: 'Privacy', onPress: this.handleItemPress },
       {
