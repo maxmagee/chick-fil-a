@@ -2,7 +2,7 @@ import { createStackNavigator } from 'react-navigation';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 import { colors, navigationHeaderTitle } from '../globalStyles';
-import { HomeScreen, HelpScreen, OptionsScreen, QAScreen } from '../../screens';
+import { HomeScreen, HelpScreen, LegalScreen, OptionsScreen, QAScreen } from '../../screens';
 
 const HomeStackNavigator = createStackNavigator({
   Home: {
@@ -15,6 +15,7 @@ const HomeStackNavigator = createStackNavigator({
     screen: OptionsScreen,
     navigationOptions: () => ({
       title: 'Chick-fil-A One',
+      headerBackTitle: 'Back',
       headerTitleStyle: styles.headerTitle,
       headerTintColor: colors.white,
       headerStyle: {
@@ -36,6 +37,17 @@ const HomeStackNavigator = createStackNavigator({
   QA: {
     screen: QAScreen,
     navigationOptions: () => ({
+      headerTitleStyle: styles.headerTitle,
+      headerTintColor: colors.white,
+      headerStyle: {
+        backgroundColor: colors.red
+      }
+    })
+  },
+  Legal: {
+    screen: LegalScreen,
+    navigationOptions: () => ({
+      title: 'Legal',
       headerTitleStyle: styles.headerTitle,
       headerTintColor: colors.white,
       headerStyle: {
