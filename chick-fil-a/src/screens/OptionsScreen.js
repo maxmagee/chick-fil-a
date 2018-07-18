@@ -34,7 +34,12 @@ class OptionsScreen extends Component {
       { title: 'Give Feedback', onPress: this.handleItemPress },
       { title: 'Chick-fil-A One Intro', onPress: this.handleItemPress },
       { title: 'Privacy', onPress: this.handleItemPress },
-      { title: 'Legal Information', onPress: this.handleItemPress },
+      {
+        title: 'Legal Information',
+        onPress: () => {
+          this.props.navigation.navigate('Legal');
+        }
+      },
       { title: 'Notifications', onPress: this.handleItemPress },
       { title: 'Licenses', onPress: this.handleItemPress },
       { title: 'Privacy', onPress: this.handleItemPress },

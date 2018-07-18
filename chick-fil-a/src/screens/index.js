@@ -7,6 +7,7 @@ import MenuScreen from './MenuScreen';
 import MyCardScreen from './MyCardScreen';
 import MyOrderScreen from './MyOrderScreen';
 import QAScreen from './QAScreen';
+import LegalScreen from './LegalScreen';
 
 export {
   HelpScreen,
@@ -17,5 +18,6 @@ export {
   MenuScreen,
   MyCardScreen,
   MyOrderScreen,
-  QAScreen
+  QAScreen,
+  LegalScreen
 };
