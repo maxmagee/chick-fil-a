@@ -212,7 +212,7 @@ For Android: To get started, select the “My card” icon in the action bar. Ne
       answer: `If you've selected curbside delivery, Chick-fil-A team members will look for the vehicle type and color that you entered in the app. if all else fails, we will call your cell phone number.`
     },
     {
-      question: `Where should i wait for carry-out orders?`,
+      question: `Where should I wait for carry-out orders?`,
       answer: `Please wait near the "Pickup" sign. One of our servers will find you.`
     },
     {
@@ -228,7 +228,7 @@ For Android: To get started, select the “My card” icon in the action bar. Ne
       answer: `Not yet, but we're working on it.`
     },
     {
-      question: `is there wa way to select a different restaurant, rather than just the closest location?`,
+      question: `is there a way to select a different restaurant, rather than just the closest location?`,
       answer: `Yes. From the app's home screen, tap "Find" and select a location from the map.`
     }
   ],
