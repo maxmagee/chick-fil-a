@@ -33,7 +33,12 @@ class OptionsScreen extends Component {
       },
       { title: 'Give Feedback', onPress: this.handleItemPress },
       { title: 'Chick-fil-A One Intro', onPress: this.handleItemPress },
-      { title: 'Privacy', onPress: this.handleItemPress },
+      {
+        title: 'Privacy',
+        onPress: () => {
+          this.props.navigation.navigate('Privacy');
+        }
+      },
       {
         title: 'Legal Information',
         onPress: () => {
@@ -47,7 +52,6 @@ class OptionsScreen extends Component {
         }
       },
       { title: 'Licenses', onPress: this.handleItemPress },
-      { title: 'Privacy', onPress: this.handleItemPress },
       {
         title: 'Enable Tips',
         switch: { onValueChange: this.toggleTipsEnabled, value: this.state.tipsEnabled }

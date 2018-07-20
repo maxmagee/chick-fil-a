@@ -8,7 +8,8 @@ import {
   LegalScreen,
   NotificationScreen,
   OptionsScreen,
-  QAScreen
+  QAScreen,
+  PrivacyScreen
 } from '../../screens';
 
 const HomeStackNavigator = createStackNavigator({
@@ -66,6 +67,17 @@ const HomeStackNavigator = createStackNavigator({
     screen: NotificationScreen,
     navigationOptions: () => ({
       title: 'Notifications',
+      headerTitleStyle: styles.headerTitle,
+      headerTintColor: colors.white,
+      headerStyle: {
+        backgroundColor: colors.red
+      }
+    })
+  },
+  Privacy: {
+    screen: PrivacyScreen,
+    navigationOptions: () => ({
+      title: 'Privacy',
       headerTitleStyle: styles.headerTitle,
       headerTintColor: colors.white,
       headerStyle: {
