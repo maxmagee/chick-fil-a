@@ -26,6 +26,13 @@ export const paragraphText = {
   fontWeight: '100'
 };
 
+export const privacyParagraphText = {
+  fontFamily: 'Arial',
+  fontSize: 17,
+  fontWeight: 'normal',
+  lineHeight: 25
+};
+
 export const microText = {
   fontFamily: 'Arial',
   fontSize: 10,
