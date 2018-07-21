@@ -6,10 +6,6 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 import { colors, heading, listItemTitle } from '../config/globalStyles';
 
 class GiveFeedbackList extends Component {
-  componentDidMount() {
-    StatusBar.setBarStyle('dark-content');
-  }
-
   handleItemPress = () => {
     Alert.alert(`We're Sorry!`, `Feedback for this isn't available yet. Please check again later.`);
   };
@@ -17,6 +13,7 @@ class GiveFeedbackList extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <StatusBar barStyle="dark-content" />
         <View style={styles.titleContainer}>
           <View style={styles.titleContainerInner}>
             <Text style={styles.titleText}>What would you like to give us feedback on?</Text>
