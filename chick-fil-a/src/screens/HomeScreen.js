@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Text, View } from 'react-native';
+import { Button, StatusBar, Text, View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 class HomeScreen extends Component {
@@ -10,6 +10,7 @@ class HomeScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <StatusBar barStyle="dark-content" />
         <Button onPress={this.handleOptionsPress} title="Options" />
         <Text style={styles.text}>Home</Text>
       </View>

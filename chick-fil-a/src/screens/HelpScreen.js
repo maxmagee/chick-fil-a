@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Alert, Text, TouchableWithoutFeedback, Keyboard, View } from 'react-native';
+import { Alert, StatusBar, Text, TouchableWithoutFeedback, Keyboard, View } from 'react-native';
 import { Input } from 'react-native-elements';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { Ionicons } from '@expo/vector-icons';
@@ -31,6 +31,7 @@ class HelpScreen extends Component {
     return (
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <View style={{ flex: 1 }}>
+          <StatusBar barStyle="light-content" />
           <View style={styles.searchContainer}>
             <View style={styles.searchContainerInner}>
               <Text style={styles.searchTextHeader}>Please let us know how we can assist you:</Text>

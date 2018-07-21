@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { Image, ScrollView, StatusBar, Text, TouchableOpacity, View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 import questions from '../data/questions';
@@ -24,6 +24,7 @@ class QAScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <StatusBar barStyle="light-content" />
         <ScrollView style={styles.scrollContainer}>
           <View style={styles.imageContainer}>
             <Image
