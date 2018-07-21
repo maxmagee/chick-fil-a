@@ -10,6 +10,7 @@ import QAScreen from './QAScreen';
 import LegalScreen from './LegalScreen';
 import NotificationScreen from './NotificationScreen';
 import PrivacyScreen from './PrivacyScreen';
+import GiveFeedbackList from './GiveFeedbackList';
 
 export {
   HelpScreen,
@@ -23,5 +24,6 @@ export {
   QAScreen,
   LegalScreen,
   NotificationScreen,
-  PrivacyScreen
+  PrivacyScreen,
+  GiveFeedbackList
 };

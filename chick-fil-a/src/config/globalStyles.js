@@ -38,3 +38,10 @@ export const microText = {
   fontSize: 10,
   fontWeight: 'normal'
 };
+
+export const listItemTitle = {
+  fontFamily: 'Arial',
+  fontSize: 17,
+  fontWeight: 'normal',
+  color: colors.darkGray
+};
