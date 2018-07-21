@@ -40,7 +40,7 @@ class HelpScreen extends Component {
                 leftIcon={<Ionicons name="ios-search-outline" size={25} color={colors.lightGray} />}
                 inputStyle={styles.searchText}
                 inputContainerStyle={styles.searchTextInputContainer}
-                returnKeyLabel="Search"
+                returnKeyType="search"
                 autoCapitalize="none"
                 selectTextOnFocus
                 enablesReturnKeyAutomatically
