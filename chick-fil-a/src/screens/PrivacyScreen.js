@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, ScrollView, TouchableOpacity, View } from 'react-native';
+import { Text, ScrollView, StatusBar, TouchableOpacity, View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 import { colors, paragraphText, privacyParagraphText } from '../config/globalStyles';
@@ -28,6 +28,7 @@ class PrivacyScreen extends Component {
   render() {
     return (
       <ScrollView style={styles.container}>
+        <StatusBar barStyle="light-content" />
         <View style={styles.headerTextContainer}>
           <Text style={styles.headerText}>short-form privacy notice</Text>
         </View>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SafeAreaView, ScrollView } from 'react-native';
+import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
@@ -77,6 +77,7 @@ class OptionsScreen extends Component {
   render() {
     return (
       <SafeAreaView style={{ flex: 1 }}>
+        <StatusBar barStyle="light-content" />
         <ScrollView style={{ flex: 1, backgroundColor: colors.white }}>
           {this.renderListItems()}
         </ScrollView>

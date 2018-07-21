@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Alert, ScrollView, StyleSheet, Text, Switch, View } from 'react-native';
+import { Alert, ScrollView, StatusBar, StyleSheet, Text, Switch, View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { ListItem } from 'react-native-elements';
 
@@ -16,6 +16,7 @@ class NotificationScreen extends Component {
   render() {
     return (
       <View style={styles.mainContainer}>
+        <StatusBar barStyle="light-content" />
         <View style={styles.titleContainer}>
           <View style={styles.titleContainerInner}>
             <Text style={styles.titleText}>
