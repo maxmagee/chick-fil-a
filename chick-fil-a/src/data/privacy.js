@@ -1,6 +1,6 @@
 /* eslint max-len: 0 */
 const section = {
-  unique: `This includes Unique Device ID (UDID), and User IDs, consisting of a unique series of numbers and letters assigned to your device (UDID) and your account (for User IDs) and your account (for User IDs) to help us improve future user experiences, target marketing and prevent fraud on your account.`,
+  unique: `This includes Unique Device ID (UDID), and User IDs, consisting of a unique series of numbers and letters assigned to your device (UDID) and your account (for User IDs) to help us improve future user experiences, target marketing and prevent fraud on your account.`,
   location: `With your permission, your location information to (1) respond to your requests to find nearby restaurants; (2) confirm the restaurant location for your mobile orders; and/or (3) offer promotions.`,
   mobile: `When shared with us, your mobile number (if needed) to make sure your order gets to you.`,
   email: `To send you (1) information regarding your order; (2) receipts; and/or (3) marketing emails from us or Chick-fil-A Franchised Operators and Licensees.`,
