@@ -7,7 +7,14 @@ import { colors, heading, listItemTitle } from '../config/globalStyles';
 
 class GiveFeedbackList extends Component {
   handleItemPress = () => {
-    Alert.alert(`We're Sorry!`, `Feedback for this isn't available yet. Please check again later.`);
+    Alert.alert(
+      `We're Sorry!`,
+      `Feedback for a store location is not available yet. Check again later.`
+    );
+  };
+
+  openFeedbackForm = () => {
+    this.props.navigation.navigate('FeedbackForm');
   };
 
   render() {
@@ -30,14 +37,14 @@ class GiveFeedbackList extends Component {
         <ListItem
           title="The Chick-fil-A App"
           titleStyle={listItemTitle}
-          onPress={this.handleItemPress}
+          onPress={this.openFeedbackForm}
           chevron
           bottomDivider
         />
         <ListItem
           title="Other"
           titleStyle={listItemTitle}
-          onPress={this.handleItemPress}
+          onPress={this.openFeedbackForm}
           chevron
           bottomDivider
         />

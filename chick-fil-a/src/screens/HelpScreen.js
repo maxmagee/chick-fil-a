@@ -158,9 +158,6 @@ const styles = EStyleSheet.create({
     borderColor: colors.darkGray,
     borderWidth: 1
   },
-  searchTextInput: {
-    height: 40
-  },
   searchText: {
     fontFamily: 'Arial',
     fontSize: 20,
