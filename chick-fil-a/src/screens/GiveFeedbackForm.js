@@ -18,7 +18,7 @@ class GiveFeedbackForm extends Component {
   }
 
   componentDidMount() {
-    this.props.navigation.setParams({ getHeaderRight: this.renderHeaderRight() });
+    this.props.navigation.setParams({ getHeaderRight: this.renderHeaderRight(false) });
   }
 
   goToNext = () => {
@@ -29,24 +29,28 @@ class GiveFeedbackForm extends Component {
   };
 
   updateComment = newValue => {
-    this.setState({
-      comment: newValue
+    this.setState(
+      {
+        comment: newValue.trim()
+      },
+      () => {
+        this.updateHeader();
+      }
+    );
+  };
+
+  updateHeader = () => {
+    const enableRightButton = this.state.comment.length > 4;
+    this.props.navigation.setParams({
+      getHeaderRight: this.renderHeaderRight(enableRightButton)
     });
   };
 
-  renderHeaderRight = () => {
-    return (
-      <View style={headerRightButtonContainer}>
-        <Button
-          ref={this.headerRightButtonRef}
-          color={colors.red}
-          title="Next"
-          dialbled={false}
-          onPress={this.goToNext}
-        />
-      </View>
-    );
-  };
+  renderHeaderRight = enabled => (
+    <View style={headerRightButtonContainer}>
+      <Button color={colors.red} title="Next" disabled={!enabled} onPress={this.goToNext} />
+    </View>
+  );
 
   render() {
     return (

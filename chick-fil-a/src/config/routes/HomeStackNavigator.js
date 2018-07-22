@@ -91,6 +91,7 @@ const HomeStackNavigator = createStackNavigator({
     screen: GiveFeedbackList,
     navigationOptions: () => ({
       title: 'Give Feedback',
+      headerBackTitle: 'Back',
       headerTintColor: colors.red,
       headerStyle: {
         backgroundColor: colors.white
