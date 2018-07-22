@@ -45,3 +45,7 @@ export const listItemTitle = {
   fontWeight: 'normal',
   color: colors.darkGray
 };
+
+export const headerRightButtonContainer = {
+  paddingRight: 5
+};

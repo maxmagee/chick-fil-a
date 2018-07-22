@@ -1,13 +1,51 @@
 import React, { Component } from 'react';
-import { KeyboardAvoidingView, StatusBar, Text, View } from 'react-native';
+import { Alert, Button, KeyboardAvoidingView, StatusBar, Text, View } from 'react-native';
 import { Input } from 'react-native-elements';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-import { colors, heading } from '../config/globalStyles';
+import { colors, heading, headerRightButtonContainer } from '../config/globalStyles';
 
 class GiveFeedbackForm extends Component {
-  static navigationOptions = {
-    tabBarVisisble: false
+  static navigationOptions = ({ navigation }) => ({
+    headerRight: navigation.getParam('getHeaderRight')
+  });
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      comment: ''
+    };
+  }
+
+  componentDidMount() {
+    this.props.navigation.setParams({ getHeaderRight: this.renderHeaderRight() });
+  }
+
+  goToNext = () => {
+    Alert.alert(
+      `We're Sorry!`,
+      `Submitting a feedback form is not supported yet. Please check again later.`
+    );
+  };
+
+  updateComment = newValue => {
+    this.setState({
+      comment: newValue
+    });
+  };
+
+  renderHeaderRight = () => {
+    return (
+      <View style={headerRightButtonContainer}>
+        <Button
+          ref={this.headerRightButtonRef}
+          color={colors.red}
+          title="Next"
+          dialbled={false}
+          onPress={this.goToNext}
+        />
+      </View>
+    );
   };
 
   render() {
@@ -28,6 +66,8 @@ class GiveFeedbackForm extends Component {
             placeholderTextColor={colors.lightGray}
             inputContainerStyle={styles.inputContainerStyle}
             inputStyle={styles.inputStyle}
+            value={this.state.comment}
+            onChangeText={this.updateComment}
           />
         </View>
       </KeyboardAvoidingView>
