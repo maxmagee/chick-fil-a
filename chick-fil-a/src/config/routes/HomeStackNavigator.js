@@ -11,7 +11,8 @@ import {
   QAScreen,
   PrivacyScreen,
   GiveFeedbackList,
-  GiveFeedbackForm
+  GiveFeedbackForm,
+  GiveFeedbackContactForm
 } from '../../screens';
 
 const HomeStackNavigator = createStackNavigator({
@@ -104,6 +105,20 @@ const HomeStackNavigator = createStackNavigator({
   },
   FeedbackForm: {
     screen: GiveFeedbackForm,
+    navigationOptions: () => ({
+      title: 'Give Feedback',
+      headerTintColor: colors.red,
+      headerStyle: {
+        backgroundColor: colors.white
+      },
+      headerTitleStyle: [styles.headerTitle, { color: colors.darkGray }],
+      headerBackTitleStyle: {
+        color: colors.red
+      }
+    })
+  },
+  FeedbackContactForm: {
+    screen: GiveFeedbackContactForm,
     navigationOptions: () => ({
       title: 'Give Feedback',
       headerTintColor: colors.red,

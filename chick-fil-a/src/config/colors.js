@@ -5,7 +5,8 @@ const colors = {
   lightGray: '#D8D4D2',
   red: '#C30C30',
   white: '#FFFFFF',
-  systemGray: '#F6F7F8'
+  systemGray: '#F6F7F8',
+  inputLabelGray: '#B9B2AC'
 };
 
 export default colors;

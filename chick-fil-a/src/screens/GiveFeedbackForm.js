@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Alert, Button, KeyboardAvoidingView, StatusBar, Text, View } from 'react-native';
+import { Button, KeyboardAvoidingView, StatusBar, Text, View } from 'react-native';
 import { Input } from 'react-native-elements';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-import { colors, heading, headerRightButtonContainer } from '../config/globalStyles';
+import { colors, heading, headerRightButtonContainer, inputText } from '../config/globalStyles';
 
 class GiveFeedbackForm extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -21,22 +21,12 @@ class GiveFeedbackForm extends Component {
     this.props.navigation.setParams({ getHeaderRight: this.renderHeaderRight(false) });
   }
 
-  goToNext = () => {
-    Alert.alert(
-      `We're Sorry!`,
-      `Submitting a feedback form is not supported yet. Please check again later.`
-    );
+  handleHeaderRightPress = () => {
+    this.props.navigation.navigate('FeedbackContactForm');
   };
 
   updateComment = newValue => {
-    this.setState(
-      {
-        comment: newValue.trim()
-      },
-      () => {
-        this.updateHeader();
-      }
-    );
+    this.setState({ comment: newValue.trim() }, this.updateHeader);
   };
 
   updateHeader = () => {
@@ -48,7 +38,12 @@ class GiveFeedbackForm extends Component {
 
   renderHeaderRight = enabled => (
     <View style={headerRightButtonContainer}>
-      <Button color={colors.red} title="Next" disabled={!enabled} onPress={this.goToNext} />
+      <Button
+        color={colors.red}
+        title="Next"
+        disabled={!enabled}
+        onPress={this.handleHeaderRightPress}
+      />
     </View>
   );
 
@@ -68,8 +63,8 @@ class GiveFeedbackForm extends Component {
             multiline
             placeholder="Tap here to enter comments."
             placeholderTextColor={colors.lightGray}
-            inputContainerStyle={styles.inputContainerStyle}
-            inputStyle={styles.inputStyle}
+            inputContainerStyle={styles.inputContainer}
+            inputStyle={styles.input}
             value={this.state.comment}
             onChangeText={this.updateComment}
           />
@@ -110,20 +105,20 @@ const styles = EStyleSheet.create({
     paddingHorizontal: 5,
     paddingBottom: 30
   },
-  inputContainerStyle: {
+  inputContainer: {
     height: '100%',
     backgroundColor: colors.white,
     borderColor: colors.darkGray,
     borderWidth: 1,
     padding: 10
   },
-  inputStyle: {
+  input: {
     height: '100%',
     backgroundColor: colors.white,
-    fontFamily: 'Arial',
-    fontSize: 15,
-    fontWeight: 'normal',
-    color: colors.darkGray,
+    fontFamily: inputText.fontFamily,
+    fontSize: inputText.fontSize,
+    fontWeight: inputText.fontWeight,
+    color: inputText.color,
     marginLeft: 0,
     paddingTop: 0
   }
