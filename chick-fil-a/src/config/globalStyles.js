@@ -49,3 +49,10 @@ export const listItemTitle = {
 export const headerRightButtonContainer = {
   paddingRight: 5
 };
+
+export const inputText = {
+  fontFamily: 'Arial',
+  fontSize: 15,
+  fontWeight: 'normal',
+  color: colors.darkGray
+};
