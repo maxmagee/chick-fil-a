@@ -13,6 +13,7 @@ import PrivacyScreen from './PrivacyScreen';
 import GiveFeedbackList from './GiveFeedbackList';
 import GiveFeedbackForm from './GiveFeedbackForm';
 import GiveFeedbackContactForm from './GiveFeedbackContactForm';
+import LicenseScreen from './LicenseScreen';
 
 export {
   HelpScreen,
@@ -29,5 +30,6 @@ export {
   PrivacyScreen,
   GiveFeedbackList,
   GiveFeedbackForm,
-  GiveFeedbackContactForm
+  GiveFeedbackContactForm,
+  LicenseScreen
 };
