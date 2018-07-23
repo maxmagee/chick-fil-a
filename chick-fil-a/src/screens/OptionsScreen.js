@@ -56,7 +56,12 @@ class OptionsScreen extends Component {
           this.props.navigation.navigate('Notifications');
         }
       },
-      { title: 'Licenses', onPress: this.handleItemPress },
+      {
+        title: 'Licenses',
+        onPress: () => {
+          this.props.navigation.navigate('Licenses');
+        }
+      },
       {
         title: 'Enable Tips',
         switch: { onValueChange: this.toggleTipsEnabled, value: this.state.tipsEnabled }

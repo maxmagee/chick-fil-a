@@ -12,7 +12,8 @@ import {
   PrivacyScreen,
   GiveFeedbackList,
   GiveFeedbackForm,
-  GiveFeedbackContactForm
+  GiveFeedbackContactForm,
+  LicenseScreen
 } from '../../screens';
 
 const HomeStackNavigator = createStackNavigator({
@@ -128,6 +129,17 @@ const HomeStackNavigator = createStackNavigator({
       headerTitleStyle: [styles.headerTitle, { color: colors.darkGray }],
       headerBackTitleStyle: {
         color: colors.red
+      }
+    })
+  },
+  Licenses: {
+    screen: LicenseScreen,
+    navigationOptions: () => ({
+      title: 'Licenses',
+      headerTitleStyle: styles.headerTitle,
+      headerTintColor: colors.white,
+      headerStyle: {
+        backgroundColor: colors.red
       }
     })
   }
