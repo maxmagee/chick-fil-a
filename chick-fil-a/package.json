@@ -8,6 +8,7 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-28.0.0.tar.gz",
     "react-native-elements": "1.0.0-beta5",
     "react-native-extended-stylesheet": "^0.8.1",
+    "react-native-textinput-effects": "^0.4.2",
     "react-navigation": "^2.6.2"
   },
   "devDependencies": {
