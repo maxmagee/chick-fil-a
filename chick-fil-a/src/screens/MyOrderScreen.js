@@ -1,28 +1,36 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { StatusBar, Text, View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
+
+import { colors, paragraphText } from '../config/globalStyles';
 
 class MyOrderScreen extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.text}>My Order</Text>
+      <View style={styles.errorContainer}>
+        <StatusBar barStyle="light-content" />
+        <Text style={styles.errorText}>
+          We're sorry! The My Order page is not available yet. Please check again later.
+        </Text>
       </View>
     );
   }
 }
 
 const styles = EStyleSheet.create({
-  container: {
+  errorContainer: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#FFFFFF'
+    backgroundColor: colors.red,
+    padding: 20
   },
-  text: {
-    color: 'black',
+  errorText: {
+    color: colors.white,
+    fontFamily: paragraphText.fontFamily,
     fontSize: 24,
-    fontFamily: 'Arial'
+    fontWeight: 'normal',
+    textAlign: 'center'
   }
 });
 
