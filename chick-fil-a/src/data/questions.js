@@ -201,7 +201,7 @@ For Android: To get started, select the “My card” icon in the action bar. Ne
     },
     {
       question: `How will I receive my receipt for a mobile order?`,
-      answer: `Your receive will be sent via email.`
+      answer: `Your receipt will be sent via email.`
     },
     {
       question: `How can I get a refund if I am dissatisfied or received the wrong food order?`,
