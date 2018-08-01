@@ -31,7 +31,11 @@ class IntroScreen extends Component {
   };
 
   handleGetStartedPress = () => {
-    this.props.navigation.navigate('MainTabs');
+    const getStartedTargetRoute = this.props.navigation.getParam(
+      'getStartedTargetRoute',
+      'MainTabNavigator'
+    );
+    this.props.navigation.navigate(getStartedTargetRoute);
   };
 
   renderGetStartedButton = () => (
@@ -58,6 +62,7 @@ class IntroScreen extends Component {
       //eslint-disable-next-line
       <View style={{ flex: 1, backgroundColor: introSlideStyles._lowerContainer.backgroundColor }}>
         <ScrollView
+          ref={this.introScrollView}
           horizontal
           pagingEnabled
           showsHorizontalScrollIndicator={false}

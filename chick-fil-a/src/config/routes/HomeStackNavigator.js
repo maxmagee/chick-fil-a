@@ -15,7 +15,6 @@ import {
   GiveFeedbackContactForm,
   LicenseScreen
 } from '../../screens';
-import { SignUpMethodScreen } from '../../screens/authentication';
 
 const HomeStackNavigator = createStackNavigator(
   {
@@ -143,16 +142,6 @@ const HomeStackNavigator = createStackNavigator(
         headerTintColor: colors.white,
         headerStyle: {
           backgroundColor: colors.red
-        }
-      })
-    },
-    Signup: {
-      screen: SignUpMethodScreen,
-      navigationOptions: () => ({
-        headerBackTitle: 'Back',
-        headerTintColor: colors.red,
-        headerStyle: {
-          backgroundColor: colors.white
         }
       })
     }

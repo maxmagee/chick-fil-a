@@ -37,7 +37,14 @@ class OptionsScreen extends Component {
           this.props.navigation.navigate('FeedbackList');
         }
       },
-      { title: 'Chick-fil-A One Intro', onPress: this.handleItemPress },
+      {
+        title: 'Chick-fil-A One Intro',
+        onPress: () => {
+          this.props.navigation.navigate('IntroStackNavigator', {
+            getStartedTargetRoute: 'SignupStackNavigator'
+          });
+        }
+      },
       {
         title: 'Privacy',
         onPress: () => {
