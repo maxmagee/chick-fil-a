@@ -11,7 +11,7 @@ import {
   paragraphText
 } from '../../config/globalStyles';
 
-class GiveFeedbackContactForm extends Component {
+class GiveFeedbackContactFormScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     headerRight: navigation.getParam('getHeaderRight')
   });
@@ -217,4 +217,4 @@ const styles = EStyleSheet.create({
   }
 });
 
-export default GiveFeedbackContactForm;
+export default GiveFeedbackContactFormScreen;
