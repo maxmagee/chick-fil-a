@@ -3,7 +3,7 @@ import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-import colors from '../config/colors';
+import colors from '../../config/colors';
 
 class OptionsScreen extends Component {
   constructor(props) {

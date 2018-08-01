@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Image, ScrollView, StatusBar, Text, TouchableOpacity, View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-import questions from '../data/questions';
-import { colors, paragraphText } from '../config/globalStyles';
+import questions from '../../data/questions';
+import { colors, paragraphText } from '../../config/globalStyles';
 
-import { CollapsingPanel } from '../components/CollapsingPanel';
+import { CollapsingPanel } from '../../components/CollapsingPanel';
 
 class QAScreen extends Component {
   static navigationOptions = ({ navigation }) => ({

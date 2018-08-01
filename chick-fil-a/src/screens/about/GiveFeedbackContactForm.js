@@ -9,7 +9,7 @@ import {
   headerRightButtonContainer,
   inputText,
   paragraphText
-} from '../config/globalStyles';
+} from '../../config/globalStyles';
 
 class GiveFeedbackContactForm extends Component {
   static navigationOptions = ({ navigation }) => ({

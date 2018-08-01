@@ -3,7 +3,7 @@ import { Alert, StatusBar, Text, View } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-import { colors, heading, listItemTitle } from '../config/globalStyles';
+import { colors, heading, listItemTitle } from '../../config/globalStyles';
 
 class GiveFeedbackList extends Component {
   handleItemPress = () => {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, WebView } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
-import { colors, paragraphText } from '../config/globalStyles';
+import { colors, paragraphText } from '../../config/globalStyles';
 
 class LegalScreen extends Component {
   renderError = () => (
