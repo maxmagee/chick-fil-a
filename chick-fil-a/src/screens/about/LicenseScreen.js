@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { StatusBar, Text, View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-import Data from '../data/licenses';
-import { colors, heading } from '../config/globalStyles';
+import Data from '../../data/licenses';
+import { colors, heading } from '../../config/globalStyles';
 
-import { LicenseList } from '../components/LicenseList';
+import { LicenseList } from '../../components/LicenseList';
 
 function extractNameFromGithubUrl(url) {
   if (!url) {

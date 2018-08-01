@@ -3,7 +3,7 @@ import { Alert, ScrollView, StatusBar, StyleSheet, Text, Switch, View } from 're
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { ListItem } from 'react-native-elements';
 
-import { colors, heading, heading2, microText } from '../config/globalStyles';
+import { colors, heading, heading2, microText } from '../../config/globalStyles';
 
 class NotificationScreen extends Component {
   toggle = () => {

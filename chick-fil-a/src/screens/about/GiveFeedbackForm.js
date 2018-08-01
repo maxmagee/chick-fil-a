@@ -3,7 +3,7 @@ import { Button, KeyboardAvoidingView, StatusBar, Text, View } from 'react-nativ
 import { Input } from 'react-native-elements';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-import { colors, heading, headerRightButtonContainer, inputText } from '../config/globalStyles';
+import { colors, heading, headerRightButtonContainer, inputText } from '../../config/globalStyles';
 
 class GiveFeedbackForm extends Component {
   static navigationOptions = ({ navigation }) => ({

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Text, ScrollView, StatusBar, TouchableOpacity, View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-import { colors, paragraphText, privacyParagraphText } from '../config/globalStyles';
-import sectionsData from '../data/privacy';
+import { colors, paragraphText, privacyParagraphText } from '../../config/globalStyles';
+import sectionsData from '../../data/privacy';
 import {
   biometrics,
   email,
@@ -16,9 +16,9 @@ import {
   unique,
   user,
   video
-} from '../../assets/privacy';
+} from '../../../assets/privacy';
 
-import { PrivacySection } from '../components/PrivacySection';
+import { PrivacySection } from '../../components/PrivacySection';
 
 class PrivacyScreen extends Component {
   redirectToLegal = () => {

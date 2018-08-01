@@ -4,7 +4,7 @@ import { Input } from 'react-native-elements';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { Ionicons } from '@expo/vector-icons';
 
-import { colors, heading } from '../config/globalStyles';
+import { colors, heading } from '../../config/globalStyles';
 import {
   Bag,
   Cow,
@@ -18,9 +18,9 @@ import {
   PhoneBanner,
   PhoneWithHandBanner,
   TreatBanner
-} from '../../assets/help';
+} from '../../../assets/help';
 
-import { HelpButton } from '../components/HelpButton';
+import { HelpButton } from '../../components/HelpButton';
 
 class HelpScreen extends Component {
   search = () => {

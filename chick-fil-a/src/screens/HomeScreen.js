@@ -61,7 +61,7 @@ class HomeScreen extends Component {
   };
 
   handleSignUp = () => {
-    this.props.navigation.navigate('Signup');
+    this.props.navigation.navigate('SignupStackNavigator');
   };
 
   handleAbout = () => {

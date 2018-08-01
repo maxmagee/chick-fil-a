@@ -2,20 +2,20 @@ import { createStackNavigator } from 'react-navigation';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 import { colors, navigationHeaderTitle } from '../globalStyles';
+
+import { HomeScreen } from '../../screens';
 import {
-  HomeScreen,
+  GiveFeedbackContactForm,
+  GiveFeedbackForm,
+  GiveFeedbackList,
   HelpScreen,
   LegalScreen,
+  LicenseScreen,
   NotificationScreen,
   OptionsScreen,
-  QAScreen,
   PrivacyScreen,
-  GiveFeedbackList,
-  GiveFeedbackForm,
-  GiveFeedbackContactForm,
-  LicenseScreen
-} from '../../screens';
-import { SignUpMethodScreen } from '../../screens/authentication';
+  QAScreen
+} from '../../screens/about';
 
 const HomeStackNavigator = createStackNavigator(
   {
@@ -143,16 +143,6 @@ const HomeStackNavigator = createStackNavigator(
         headerTintColor: colors.white,
         headerStyle: {
           backgroundColor: colors.red
-        }
-      })
-    },
-    Signup: {
-      screen: SignUpMethodScreen,
-      navigationOptions: () => ({
-        headerBackTitle: 'Back',
-        headerTintColor: colors.red,
-        headerStyle: {
-          backgroundColor: colors.white
         }
       })
     }
