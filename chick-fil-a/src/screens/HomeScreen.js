@@ -61,7 +61,7 @@ class HomeScreen extends Component {
   };
 
   handleSignUp = () => {
-    Alert.alert(`We're Sorry!`, `Signing up is not supported yet. Please check again later.`);
+    this.props.navigation.navigate('Signup');
   };
 
   handleAbout = () => {
