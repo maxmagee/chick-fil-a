@@ -5,9 +5,9 @@ import { colors, navigationHeaderTitle } from '../globalStyles';
 
 import { HomeScreen } from '../../screens';
 import {
-  GiveFeedbackContactForm,
-  GiveFeedbackForm,
-  GiveFeedbackList,
+  GiveFeedbackContactFormScreen,
+  GiveFeedbackFormScreen,
+  GiveFeedbackListScreen,
   HelpScreen,
   LegalScreen,
   LicenseScreen,
@@ -93,7 +93,7 @@ const HomeStackNavigator = createStackNavigator(
       })
     },
     FeedbackList: {
-      screen: GiveFeedbackList,
+      screen: GiveFeedbackListScreen,
       navigationOptions: () => ({
         title: 'Give Feedback',
         headerBackTitle: 'Back',
@@ -108,7 +108,7 @@ const HomeStackNavigator = createStackNavigator(
       })
     },
     FeedbackForm: {
-      screen: GiveFeedbackForm,
+      screen: GiveFeedbackFormScreen,
       navigationOptions: () => ({
         title: 'Give Feedback',
         headerTintColor: colors.red,
@@ -122,7 +122,7 @@ const HomeStackNavigator = createStackNavigator(
       })
     },
     FeedbackContactForm: {
-      screen: GiveFeedbackContactForm,
+      screen: GiveFeedbackContactFormScreen,
       navigationOptions: () => ({
         title: 'Give Feedback',
         headerTintColor: colors.red,

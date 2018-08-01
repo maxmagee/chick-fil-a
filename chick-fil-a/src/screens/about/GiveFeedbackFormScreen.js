@@ -5,7 +5,7 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 
 import { colors, heading, headerRightButtonContainer, inputText } from '../../config/globalStyles';
 
-class GiveFeedbackForm extends Component {
+class GiveFeedbackFormScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     headerRight: navigation.getParam('getHeaderRight')
   });
@@ -124,4 +124,4 @@ const styles = EStyleSheet.create({
   }
 });
 
-export default GiveFeedbackForm;
+export default GiveFeedbackFormScreen;

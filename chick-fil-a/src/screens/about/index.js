@@ -1,6 +1,6 @@
-import GiveFeedbackContactForm from './GiveFeedbackContactForm';
-import GiveFeedbackForm from './GiveFeedbackForm';
-import GiveFeedbackList from './GiveFeedbackList';
+import GiveFeedbackContactFormScreen from './GiveFeedbackContactFormScreen';
+import GiveFeedbackFormScreen from './GiveFeedbackFormScreen';
+import GiveFeedbackListScreen from './GiveFeedbackListScreen';
 import HelpScreen from './HelpScreen';
 import LegalScreen from './LegalScreen';
 import LicenseScreen from './LicenseScreen';
@@ -10,9 +10,9 @@ import PrivacyScreen from './PrivacyScreen';
 import QAScreen from './QAScreen';
 
 export {
-  GiveFeedbackContactForm,
-  GiveFeedbackForm,
-  GiveFeedbackList,
+  GiveFeedbackContactFormScreen,
+  GiveFeedbackFormScreen,
+  GiveFeedbackListScreen,
   HelpScreen,
   LegalScreen,
   LicenseScreen,

@@ -5,7 +5,7 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 
 import { colors, heading, listItemTitle } from '../../config/globalStyles';
 
-class GiveFeedbackList extends Component {
+class GiveFeedbackListScreen extends Component {
   handleItemPress = () => {
     Alert.alert(
       `We're Sorry!`,
@@ -78,4 +78,4 @@ const styles = EStyleSheet.create({
   }
 });
 
-export default GiveFeedbackList;
+export default GiveFeedbackListScreen;
