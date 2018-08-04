@@ -1,3 +1,9 @@
+# Note
+
+Chick-fil-A completely re-designed their application while I was in the middle of my replication implementation. As a result, I'm freezing work on this repo and starting fresh here: [Chicken](https://github.com/maxmagee/chicken)
+
+I will likely re-visit this and create some sort of demo page to illustrate the work I was able to accomplish, but for now I'm moving on to the new version.
+
 # Chick-fil-A
 
 The goal of this project is to replicate the existing [Chick-fil-A One](https://itunes.apple.com/us/app/chick-fil-a/id488818252?mt=8) mobile application using React Native. This project is designed to illustrate my capabilities as a React Native developer to potential employers.
